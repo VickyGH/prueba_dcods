@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Verificando Usuario</title>
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
+
+    <!-- Bootstrap core CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style type="text/css">
+        .centrado-porcentual {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div className="headerSpace  py-4 py-sm-4 py-md-4 py-lg-5" id="log">
+        <div class="container centrado-porcentual">
+            <div class="container centrado-porcentual">
+                <div class="row">
+                    {% if status == 200 %}
+                    <h2 class="col-12 text-break text-center">
+                        El correo {{email}} ha sido verificado con éxito.
+                    </h2>
+                    {% else %}
+                    <h2 class="col-12 text-break">No se ha podido realizar la verificado su usuario.</h2>
+                    <br/>
+                    <h3 class="col-12 text-break">Cominicate con el administrador.</h3>
+                    <p style="color: white;">{{req}}</p>
+                    <p style="color: white;">{{host}}</p>
+                    <p hidden>{{req}}</p>
+                    {% endif %}
+                </div>
+                <div class="row">
+                    <h6 class="col-12 text-break text-center">Redireccionando a {{url_red}}</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" >
+    function myFunction() {
+        var url_red = "{{url_red}}";
+        if (url_red != "None"){
+            location.href = url_red;
+        }
+    }
+    setTimeout(myFunction, 3000)
+</script>
+</html>

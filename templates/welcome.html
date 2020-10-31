@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Correo</title>
+</head>
+<style>
+    body {
+      padding:0;
+      margin:0;
+      display:block;
+      background:#DFDEDE;
+      -webkit-text-size-adjust:none: font-family: Montserrat;
+      font-style: normal;
+      font-size: 16px;
+      line-height: 15px;
+      letter-spacing: -0.015em;
+    }
+    .div_0{
+      margin: 10px 5px;
+      padding: 0px;
+      line-height: 18px;
+      border: 1px solid #e6e6e6;
+      border-radius: 20px;
+      background-color:#ffffff;
+    }
+    .logo {
+      display: block;
+      margin: 0 auto;
+      max-width: 600px;
+    }
+    .text_0 {
+      color: #03C9D2 !important;
+      font-size: 24px !important;
+      font-family: Montserrat;
+    }
+    .text_url {
+      color: #03C9D2 !important;
+      font-family: Montserrat;
+    }
+    .img_url {
+        display: block;
+        margin: 0 auto;
+        max-width: 200px;
+        border-radius: 20px;
+    }
+
+</style>
+
+<body class="body" bgcolor="#BEBEBE">
+<table align="center" cellpadding="0" cellspacing="0" width="600px" height="100%">
+    <tr>
+        <td>
+            <div class="div_0">
+                <div style="margin: 20px;">
+                    <div>
+                        <h2>¡Hola {{name}}!</h2>
+                        <h3>Gracias por hacer pruebas en esta plataforma</h3>
+                        <h3>Para iniciar sesión, ingresa los siguientes datos:</h3>
+                        <h3>Usuario: {{ email }} </h3>
+                        <h3>Contraseña: {{password}}</h3>
+                        <br/>
+                        <h3>Url de activación: {{url}}</h3>
+
+                        <p>
+                            Por el momento este proyecto solo maneja la parte backend.
+                            Se recomienda hacer el inicio de seccion en la colección de Postman proporcionado en el README
+                        </p>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
